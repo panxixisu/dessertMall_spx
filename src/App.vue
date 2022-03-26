@@ -1,11 +1,18 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
   <router-view />
 </template>
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 
+const value1 = ref(1)
+export default defineComponent({
+  setup() {
+    return {
+      value1
+    }
+  }
+})
+</script>
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
